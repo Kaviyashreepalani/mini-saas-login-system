@@ -52,11 +52,11 @@ axiosInstance.interceptors.response.use(
 
 const api = {
   signup: async (userData) => {
-    return await axiosInstance.post('/signup', userData);
+    return await axiosInstance.post('/auth/signup', userData); // Changed from /signup
   },
 
   login: async (credentials) => {
-    return await axiosInstance.post('/login', credentials);
+    return await axiosInstance.post('/auth/login', credentials); // Changed from /login
   },
 
   getProfile: async () => {
@@ -69,3 +69,4 @@ const api = {
 };
 
 export default api;
+
